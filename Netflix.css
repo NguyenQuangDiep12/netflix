@@ -1,0 +1,358 @@
+body {
+    background-color: black;
+    margin: 0; /* Xóa khoảng cách mặc định */
+    overflow-x: hidden; /* Ngăn cuộn ngang */
+    font-family: 'roboto', sans-serif;
+}
+
+
+.menu__link, .tieu-de {
+    color: white;
+    transition: color 0.3s; /* Thêm hiệu ứng mượt */
+}
+
+svg path {
+    fill: white; /* Đổi màu nội dung SVG */
+    transition: fill 0.3s; /* Hiệu ứng mượt */
+}
+
+h1, h3{
+    margin: 0;
+}
+
+
+
+.danh-muc {
+    width: 100%;
+    height: 75px;
+    background-color:inherit;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    opacity: 0.9;
+    z-index: 1;
+}
+
+.menu{
+    display: flex;
+    width: inherit;
+    justify-content: space-between;
+}
+
+#menu__item{
+    display: flex;
+    align-items: center;
+    margin-left: 32px;
+    gap: 12px;
+}
+
+#menu__item > #logo{
+    transition: 0.5s ease;
+}
+
+#menu__item > #logo:hover{
+    opacity: 0.5;
+}
+
+#menu__item > a{
+    position: relative;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px; /* khoang cach duoi cho border*/
+    background:linear-gradient(to right, rgb(152, 33, 33) 100%, transparent 0);
+    background-size: 0% 2px;
+    background-position: left bottom; 
+    /* vi tri background */
+    background-repeat: no-repeat;
+    /* khong lap lai phan tu background */
+    transition: background-size 0.4s ease-in-out;
+}
+
+#menu__item > a:hover{
+    background-size: 100% 2px;
+    opacity: 0.9;
+}
+
+#menu__item > a:hover{
+    color: gray;
+}
+
+.menu__link{
+    color: black;
+}
+
+#menu__button{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 32px;
+}
+
+#menu__button--search{
+    
+}
+
+
+#menu__button--notification{
+    
+}
+
+.header__icon{
+    position: relative;
+}
+
+
+#header__icon--number-film{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    text-align: center;
+    color: white;
+}
+
+
+
+#menu__button--choice{
+    position: relative;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#header__icon--btn{
+    display: block;
+    height: inherit;
+    z-index: 1;
+}
+
+#header__icon--subnav{
+    display: none;
+    position: absolute;
+    bottom: -135px;
+    left: 0;
+    background-color: black;
+    padding: 12px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
+}
+
+#header__icon--subnav.show {
+    display: block;
+  }
+
+#header__icon--subnav a{
+    display: block;
+    margin: 4px 0;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+
+    padding-bottom: 2px; /* khoang cach duoi cho border*/
+    background:linear-gradient(to right, rgb(152, 33, 33) 100%, transparent 0);
+    /* Border ban dau = 0 */
+    background-size: 0% 2px;
+    background-position: left bottom; 
+    /* vi tri background */
+    background-repeat: no-repeat;
+    /* khong lap lai phan tu background */
+    transition: 0.5s ease-in-out;
+}
+
+#header__icon--subnav a:hover{
+    background-size: 100% 2px;
+    opacity: 0.8;
+}
+
+
+.header__icon{
+    transition: 0.5s ease;
+}
+
+.header__icon:hover{
+    opacity: 0.5;
+}
+
+.header__icon:last-child{
+    display: flex;
+    align-items: center;
+    
+}
+
+.drop-down{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-color: antiquewhite;
+    padding-top: 75px;
+}
+
+#wrapper--banner{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin-top: 75px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+
+#title_video {
+    display: none;
+    position: absolute;  /* Định vị tuyệt đối trong .banner */
+    width: 100%;  /* Chiều rộng chiếm toàn bộ */
+    height: 200px;  /* Chiều cao cho title */
+    background-color: rgba(0, 0, 0, 0.8);  /* Màu nền bán trong suốt */
+    color: white;  /* Màu chữ */
+    bottom: 0; /* Đặt title ở đáy của banner */
+    left: 0; /* Căn chỉnh từ trái */
+    text-align: center;
+    line-height: 75px;  /* Canh giữa chữ */
+}
+
+#title_header{
+    margin-top: 32px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    font-size: 16px;
+    margin: 0;
+}
+
+#title_video #title_video_btn{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    justify-content: center;
+}
+
+#title_video #title_video_btn button{
+    width: 100px;
+    height: 35px;
+}
+
+.title__detail{
+    position: absolute;
+    color: white;
+    top: 70%;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-color: rgb(0 0 0 / 0.5);
+}
+
+.the-loai {
+    margin: 120px 40px 120px 32px;
+    height: 200px;
+}
+
+.tieu-de {
+    color: white;
+    font-size: 24px;
+    padding-bottom: 5px;
+    border-bottom: 4px solid #fff;
+}
+
+.danh-sach {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    /* Ngan cac phan tu ben trong xuong dong */
+}
+
+/* custom scroll */
+/* width */
+.danh-sach::-webkit-scrollbar {
+    width: auto;
+    height: 8px;
+  }
+  
+  /* Track duong ray cua scroll*/ 
+.danh-sach::-webkit-scrollbar-track {
+    background: black;
+  }
+  
+  /* Handle */
+.danh-sach::-webkit-scrollbar-thumb {
+    background: rgb(152, 33, 33);
+    border-radius: 8px;
+  }
+  
+  /* Handle on hover */
+.danh-sach::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(168, 46, 46);
+  }
+
+.videoLink{
+    cursor: pointer;
+}
+
+#banner--iframe {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.phim {
+    margin: 10px;
+    width: 15%;
+    height: 200px;
+    flex-shrink: 0;
+    display: inline-block;
+    overflow: hidden; 
+     /*An phan anh bi phong to ra khoi man hinh */
+}
+.phim a img{
+    transition: 0.3s ease-in-out;
+    
+}
+
+.phim:hover a img{
+    transform: scale(1.05);
+    /* zoom to len 5% */
+}
+
+.footer {
+    background-color: inherit;
+    color: #757575;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #757575;
+    margin: 0 8px;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-links {
+    margin: 15px 0;
+}
+
